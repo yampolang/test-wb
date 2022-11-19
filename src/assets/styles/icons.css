@@ -1,0 +1,111 @@
+.icon:hover {
+    cursor: pointer;
+}
+
+.bmi {
+    background-color: #CCCCCC;
+}
+
+.bmi:hover, .bmi-active {
+    background-color: var(--wb-magenta);
+}
+
+.bci {
+    background-color: black;
+}
+
+.bci:hover, .icon-active {
+    background-color: var(--wb-red);
+}
+
+.menu-mb-icon {
+    background-image: url("../icons/menu-mb.svg");
+    height: 20px;
+    width: 24px;
+}
+
+.menu-pc-icon {
+    background-image: url("../icons/menu-pc.svg");
+    height: 24px;
+    width: 28px;
+}
+
+.search-icon {
+    background-image: url("../icons/search.svg");
+    height: 21px;
+    width: 21px;
+}
+
+.search-mask {
+    mask-image: url("../icons/search.svg");
+    -webkit-mask-image: url("../icons/search.svg");
+    height: 21px;
+    width: 21px;
+}
+
+.home-icon {
+    mask-image: url("../icons/home.svg");
+    -webkit-mask-image: url("../icons/home.svg");
+    height: 22px;
+    width: 23px;
+}
+
+.bm-search-icon {
+    mask-image: url("../icons/menu-mb-search.svg");
+    -webkit-mask-image: url("../icons/menu-mb-search.svg");
+    height: 29px;
+    width: 29px;
+}
+
+.cart-icon {
+    mask-image: url("../icons/cart.svg");
+    -webkit-mask-image: url("../icons/cart.svg");
+    height: 24px;
+    width: 27px;
+}
+
+.heart-icon {
+    mask-image: url("../icons/heart.svg");
+    -webkit-mask-image: url("../icons/heart.svg");
+    height: 20px;
+    width: 23px;
+}
+
+.profile-icon {
+    mask-image: url("../icons/profile.svg");
+    -webkit-mask-image: url("../icons/profile.svg");
+    height: 21px;
+    width: 20px;
+}
+
+.info-icon {
+    background-image: url("../icons/info.svg");
+    height: 20px;
+    width: 20px;
+}
+
+.favorites-icon {
+    mask-image: url("../icons/heart-stroke.svg");
+    -webkit-mask-image: url("../icons/heart-stroke.svg");
+    height: 16px;
+    width: 20px;
+}
+
+.delete-icon {
+    mask-image: url("../icons/trash-can-stroke.svg");
+    -webkit-mask-image: url("../icons/trash-can-stroke.svg");
+    height: 16px;
+    width: 16px;
+}
+
+.arrow-icon {
+    background-image: url("../icons/arrow.svg");
+    height: 10px;
+    width: 16px;
+}
+
+.pencil-icon {
+    background-image: url("../icons/pencil.svg");
+    height: 16px;
+    width: 16px;
+}

@@ -1,0 +1,10 @@
+app-footer {
+    height: 64px;
+    padding: var(--mb-padding);
+}
+
+@media screen and (min-width: 1024px) {
+    app-footer {
+        padding: var(--pc-padding);
+    }
+}

@@ -1,0 +1,118 @@
+.header-mb {
+    padding: var(--mb-padding);
+    height: var(--header-mb-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.header-title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+.header-pc {
+    display: none
+}
+
+@media screen and (min-width: 1024px) {
+    .header-mb {
+        display: none;
+    }
+
+    .header-pc {
+        padding: 20px var(--pc-padding);
+        height: var(--header-pc-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 15px;
+    }
+
+    .menu-pc-icon__container {
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 8px;
+        padding: 12px 10px;
+    }
+    .menu-pc-icon__container:hover {
+        border-color: white;
+    }
+
+    .header-input__container {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        margin: 0 17px;
+        position: relative;
+    }
+
+    .header-input {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 36px;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        font-size: 18px;
+        color: white;
+    }
+    .header-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-mask__container {
+        position: absolute;
+        right: 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .search-mask__container > button {
+        border: none;
+    }
+
+    .search-mask__container > .search-mask {
+        background-color: white;
+        opacity: 20%;
+    }
+    .search-mask__container:hover > .search-mask {
+        opacity: unset;
+    }
+
+    .icon__container {
+        height: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .cart {
+        position: relative;
+    }
+
+    .cart > badge-ui {
+        top: -6px;
+        right: 3px;
+    }
+
+    .icon__container > .icon {
+        background-color: white;
+    }
+
+    .icon__container:hover {
+        color: var(--wb-magenta);
+    }
+    .icon__container:hover > .icon {
+        background-color: var(--wb-magenta);
+    }
+}

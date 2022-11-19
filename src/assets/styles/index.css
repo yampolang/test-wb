@@ -1,0 +1,75 @@
+@import "fonts.css";
+@import "icons.css";
+
+@import "modules/Basket.css";
+@import "modules/BasketDelivery.css";
+@import "modules/BasketPayment.css";
+@import "modules/BasketRecipient.css";
+@import "modules/BasketTotal.css";
+@import "modules/Footer.css";
+@import "modules/MobileMenu.css";
+@import "modules/Navbar.css";
+@import "modules/elements/BasketContentItem.css";
+@import "modules/elements/BasketList.css";
+@import "modules/ui/AmountInput.css";
+@import "modules/ui/AppButton.css";
+@import "modules/ui/AppCheckbox.css";
+@import "modules/ui/Badge.css";
+@import "modules/ui/DeliveryRefund.css";
+@import "modules/ui/TextInput.css";
+@import "modules/ui/WhiteoffCondition.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --wb-violet: #6725A8;
+    --wb-magenta: #CB11AB;
+    --wb-bg-smoky: #F6F6FA;
+    --wb-grey: #A0A0A4;
+    --wb-red: #F55123;
+    --wb-green: #0CB477;
+    --wb-smoky-dark: #F0ECF4;
+
+    --mb-padding: 16px;
+    --header-mb-height: 56px;
+    --pc-padding: 24px;
+    --header-pc-height: 88px;
+}
+
+#root {
+    min-height: 100vh;
+    width: 100%;
+    min-width: 320px;
+    background-color: var(--wb-violet);
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Segoe UI", sans-serif;
+    word-break: break-word;
+}
+
+input, ::placeholder {
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1400px) {
+
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    rotate: 180deg;
+}

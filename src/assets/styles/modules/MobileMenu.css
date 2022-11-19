@@ -1,0 +1,31 @@
+mobile-menu {
+    height: var(--header-mb-height);
+    padding: var(--mb-padding);
+    background-color: white;
+
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    min-width: 320px;
+    width: 100%;
+    border-top: 1px solid var(--wb-magenta)
+}
+
+mobile-menu-item {
+    position: relative;
+}
+mobile-menu-item:hover {
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1024px) {
+    mobile-menu {
+        display: none;
+    }
+}

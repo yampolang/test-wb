@@ -1,0 +1,44 @@
+basket-list, missing-list {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.list-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+missing-list > .list-actions > p {
+    font-weight: 600;
+}
+
+.list-actions > label {
+    display: flex;
+    column-gap: 11px;
+}
+
+.list-items > *:not(:nth-last-child(2)) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 1024px) {
+
+    basket-list {
+        margin-bottom: 21px;
+    }
+
+    missing-list {
+        margin-bottom: 24px;
+    }
+
+    .list-items > *:not(:nth-last-child(2)) {
+        border-bottom: none;
+    }
+
+    .list-items > *:not(:nth-last-child(1)) {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,43 @@
+amount-input {
+    height: 32px;
+    display: flex;
+
+    min-width: 80px;
+    width: min-content;
+    background-color: white;
+    border-radius: 4px;
+}
+
+amount-input > .input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+amount-input > button {
+    flex: 1;
+    border: none;
+    background-color: unset;
+    height: 100%;
+    width: 20px;
+    font-size: 16px;
+}
+
+amount-input > button:hover {
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1024px) {
+    amount-input {
+        height: 44px;
+        min-width: 100px;
+    }
+
+    amount-input > button {
+        width: 28px;
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,21 @@
+basket-recipient > .input__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+basket-recipient > .input__group:last-of-type {
+    margin-top: 10px;
+}
+
+basket-recipient > .title__container {
+    padding-bottom: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+    basket-recipient > .input__group {
+        flex-direction: row;
+        column-gap: 24px;
+        max-width: 700px;
+    }
+}

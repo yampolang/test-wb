@@ -1,0 +1,69 @@
+text-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 16px;
+    min-height: 44px;
+    height: max-content;
+    width: 100%;
+    max-width: 400px;
+    padding-top: 14px;
+}
+
+text-input > .input__container {
+    display: flex;
+    position: relative;
+}
+
+.has-errors > input {
+    color: var(--wb-red);
+}
+
+text-input > .input__container > input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 3px 0;
+    height: 24px;
+    width: 100%;
+}
+
+text-input > .input__container > label {
+    display: block;
+    position: absolute;
+    color: var(--wb-grey);
+    pointer-events: none;
+    transition: transform 200ms, font-size 200ms;
+}
+
+text-input > .remark {
+    font-size: 0.75em;
+    height: 20px;
+    padding-top: 4px;
+}
+
+text-input > .input__container > input:focus + label,
+text-input > .input__container > input:not(:placeholder-shown) + label {
+    font-size: 0.75em;
+    transform: translateY(-16px);
+}
+
+text-input > .errors-list {
+    padding-top: 5px;
+}
+
+.errors-list > li {
+    list-style: none;
+    font-size: 0.75em;
+    line-height: 1em;
+    color: var(--wb-red);
+}
+
+.errors-list > li:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+}

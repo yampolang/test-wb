@@ -1,0 +1,77 @@
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    app-checkbox > input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .wb-checkbox {
+        height: 22px;
+        width: 22px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .wb-checkbox:after {
+        content: '';
+        display: block;
+        height: 10px;
+        width: 5px;
+        border: 2px solid white;
+        border-left: 0;
+        border-top: 0;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 7px;
+        top: 3px;
+        opacity: 0;
+    }
+
+    .wb-checkbox:checked {
+        background-color: var(--wb-magenta);
+        border-color: var(--wb-magenta);
+    }
+
+    .wb-checkbox:checked:after, .wb-checkbox_black:checked:after {
+        opacity: 1;
+    }
+
+    .wb-checkbox_black {
+        border: 1px solid black;
+        border-radius: unset;
+        height: 15px;
+        width: 15px;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .wb-checkbox_black:after {
+        content: '';
+        display: block;
+        height: 10px;
+        width: 5px;
+        border: 2px solid black;
+        border-left: 0;
+        border-top: 0;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 3px;
+        top: 0;
+        opacity: 0;
+    }
+
+    .wb-checkbox_black:checked {
+        border: none;
+    }
+}
+
+app-checkbox > input:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px){
+    .wb-checkbox {
+        align-self: center;
+    }
+}

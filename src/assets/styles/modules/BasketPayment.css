@@ -1,0 +1,14 @@
+basket-payment > .card__container {
+    display: flex;
+    column-gap: 8px;
+}
+
+basket-payment > .card__container > p > span {
+    margin-left: 12px;
+}
+
+basket-payment > .card-info {
+    color: var(--wb-grey);
+    font-size: 0.8125em;
+    margin-top: 8px;
+}

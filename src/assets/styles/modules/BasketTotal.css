@@ -1,0 +1,97 @@
+basket-total {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    background-color: transparent;
+
+    /*row-gap: 16px;*/
+}
+
+delivery-refund, whiteoff-condition {
+    margin-top: 16px;
+}
+
+app-button {
+    margin-top: 24px;
+}
+
+basket-total .row {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+basket-total .row-total {
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+basket-total > .agreement {
+    font-size: 0.8125em;
+    line-height: 16px;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 8px;
+    margin-top: 12px;
+}
+
+basket-total > .agreement > label > a {
+    color: unset;
+    text-decoration: none;
+    border-bottom: 1px solid #0000001A;
+}
+
+basket-total > delivery-refund, basket-total > whiteoff-condition {
+    /*max-width: max-content;*/
+    background-color: var(--wb-smoky-dark);
+    padding: 8px 8px 12px;
+    border-radius: 8px;
+}
+
+total-item {
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    basket-total {
+        width: 31%;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.3);
+    }
+
+    basket-total > delivery-refund, basket-total > whiteoff-condition {
+        background-color: var(--wb-bg-smoky);
+    }
+
+    total-item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        font-size: 16px;
+        margin-top: 24px;
+    }
+
+    total-item > .total-title__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    total-item > *:not(.total-title__container) {
+        font-size: 0.8125em;
+    }
+
+    total-item > .delivery-dates {
+        color: var(--wb-magenta);
+        border-bottom: 1px dashed #CB11AB33;
+        width: max-content;
+    }
+
+    total-item > .total-card__container {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+}

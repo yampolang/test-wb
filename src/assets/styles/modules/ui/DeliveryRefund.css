@@ -1,0 +1,16 @@
+delivery-refund {
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+    font-size: 13px;
+}
+
+delivery-refund:before {
+    content: url("/src/assets/icons/delivery-info.svg");
+    height: 21px;
+}
+
+delivery-refund > p > span {
+    color: var(--wb-green);
+    border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+}

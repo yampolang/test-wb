@@ -1,0 +1,67 @@
+
+
+.delivery-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-item:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+
+.delivery-item > .title {
+    font-weight: 600;
+}
+
+.delivery-item > .content > span, .info > p {
+    font-size: 0.8125em;
+}
+
+.delivery-item > .content > span:before {
+    content: url("/src/assets/icons/rating.svg");
+    margin-right: 4px;
+}
+
+.content-product {
+    display: flex;
+    column-gap: 8px;
+    margin-top: 12px;
+}
+
+.content-product > .product__container {
+    display: flex;
+    position: relative;
+    width: 40px;
+}
+
+.content-product > .product__container > badge-ui {
+    right: -2px;
+}
+
+.product__container > img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+basket-delivery > delivery-refund {
+    margin-top: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .delivery-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .delivery-item > .title {
+        width: 17%;
+    }
+
+    .delivery-item > .content, .content-product {
+        width: 79.2%;
+        margin-top: 0;
+    }
+
+}
