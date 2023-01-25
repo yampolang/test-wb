@@ -14,7 +14,11 @@
     background-color: black;
 }
 
-.bci:hover, .icon-active {
+.bci-grey {
+    background-color: var(--wb-grey);
+}
+
+.bci:hover, .icon-active, .bci-grey:hover {
     background-color: var(--wb-red);
 }
 
@@ -106,6 +110,12 @@
 
 .pencil-icon {
     background-image: url("../icons/pencil.svg");
+    height: 16px;
+    width: 16px;
+}
+
+.cross-icon {
+    background-image: url("../icons/cross-icon.svg");
     height: 16px;
     width: 16px;
 }

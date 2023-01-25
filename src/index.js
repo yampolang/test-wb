@@ -1,7 +1,7 @@
-import("./components/Navbar.js")
-import("./components/Basket.js")
-import("./components/Footer.js")
-import("./components/MobileMenu.js")
+import("./components/Navbar.js");
+import("./components/Basket.js");
+import("./components/Footer.js");
+import("./components/MobileMenu.js");
 
 const root = document.getElementById('root')
 root.innerHTML = `

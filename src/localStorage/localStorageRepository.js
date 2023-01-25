@@ -17,5 +17,17 @@ export const LSActions = {
     },
   },
 
+  selectedAddress: {
+    get() {
+      return JSON.parse(localStorage.getItem('selectedAddress')) || {
+        addressId: '',
+      }
+    },
+
+    set(id) {
+      localStorage.setItem('selectedAddress', JSON.stringify(id))
+    },
+  },
+
   clear: () => localStorage.clear()
 }

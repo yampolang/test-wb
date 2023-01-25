@@ -26,9 +26,9 @@ export const products = [
     'seller': 'OOO Мегапрофстиль',
     'img_url': 'src/assets/images/phone.jpg',
     'img_url-mini': 'src/assets/images/phone-mini.jpg',
-    'amount': 100,
+    'amount': 300,
     'price': 11500,
-    // 'discount_price': 10500,
+    'discount_price': 10500,
     'currency': 'сом',
     'sold_out': false
   },
@@ -165,11 +165,82 @@ export const DeliveryInfo = {
   ]
 }
 
-export const PaymentInfo = {
-  'payment_system': 'МИР',
-  'card_number': '1234560000001234',
-  'expiration_date': {
-    'month': '01',
-    'year': '30',
-  }
-}
+export const MyAddresses = [
+  {
+    'id': 'addr1',
+    'city': 'Бишкек',
+    'microdistrict': 'Джал',
+    'street': 'Ахунбаева Исы',
+    'house': '67/1',
+    'work_hours': {
+      'days': 'Ежедневно',
+      'from': '10',
+      'to': '21'
+    },
+  },
+  {
+    'id': 'addr2',
+    'city': 'Бишкек',
+    'microdistrict': 'Джал',
+    'street': 'Ахунбаева Исы',
+    'house': '67/1',
+    'rating': '4.99',
+    'work_hours': {
+      'days': 'Ежедневно',
+      'from': '10',
+      'to': '21'
+    },
+  },
+  {
+    'id': 'addr3',
+    'city': 'Бишкек',
+    'street': 'Табышалиева',
+    'house': '57',
+    'rating': '4.99',
+    'work_hours': {
+      'days': 'Ежедневно',
+      'from': '10',
+      'to': '21'
+    },
+  },
+
+]
+
+export const PaymentInfo = [
+  {
+    'id': 'card1',
+    'payment_system': 'МИР',
+    'card_number': '1234560000001234',
+    'expiration_date': {
+      'month': '01',
+      'year': '30',
+    }
+  },
+  {
+    'id': 'card2',
+    'payment_system': 'VISA',
+    'card_number': '1234560000001234',
+    'expiration_date': {
+      'month': '01',
+      'year': '30',
+    }
+  },
+  {
+    'id': 'card3',
+    'payment_system': 'MASTERCARD',
+    'card_number': '1234560000001234',
+    'expiration_date': {
+      'month': '01',
+      'year': '30',
+    }
+  },
+  {
+    'id': 'card4',
+    'payment_system': 'NEMASTERCARD',
+    'card_number': '1234560000001234',
+    'expiration_date': {
+      'month': '01',
+      'year': '30',
+    }
+  },
+]

@@ -1,0 +1,51 @@
+app-radio > input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+app-radio {
+    position: relative;
+    display: flex;
+    width: max-content;
+    border-radius: 20px;
+}
+
+app-radio:hover, app-radio > *:hover {
+    cursor: pointer;
+}
+
+.basic {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.basic:checked {
+    border: 5px solid var(--wb-magenta);
+}
+
+.outlined {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+
+    border-radius: 20px;
+}
+.outlined + label {
+    font-size: 0.8125em;
+    font-weight: 700;
+    line-height: 1em;
+    padding: 11px;
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid rgba(203, 17, 171, 0.2);
+}
+
+.outlined:checked + label {
+    border-color: var(--wb-magenta);
+}

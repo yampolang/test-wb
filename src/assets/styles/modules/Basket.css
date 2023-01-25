@@ -46,10 +46,16 @@ basket-delivery, basket-payment, basket-recipient, basket-total {
     font-weight: 700;
 }
 
-.title__container > a {
+.title__container > .change-btn {
     font-weight: 700;
+    font-size: 1em;
     color: var(--wb-magenta);
-    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+.title__container > .change-btn:hover {
+    cursor: pointer;
 }
 
 app-footer {
@@ -97,5 +103,12 @@ app-footer {
 
     .title__container > h3 {
         font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    basket-page {
+        width: 1400px;
+        margin: 0 auto;
     }
 }

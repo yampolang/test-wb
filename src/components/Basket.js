@@ -1,6 +1,6 @@
 import("./elements/BasketContent.js");
-import("./BasketDelivery.js");
-import("./BasketPayment.js");
+import("./BasketDelivery/BasketDelivery.js");
+import("./BasketPayment/BasketPayment.js");
 import("./BasketRecipient.js");
 import("./BasketTotal.js");
 

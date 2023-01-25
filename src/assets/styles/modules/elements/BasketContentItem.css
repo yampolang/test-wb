@@ -102,6 +102,10 @@
     align-items: center;
 }
 
+.amount__container__text {
+    color: var(--wb-red);
+}
+
 .item-actions > div:last-child {
     display: flex;
     column-gap: 27px;

@@ -42,17 +42,17 @@ customElements.define('basket-total', class extends HTMLElement {
         </li>
       </ul>
       
-      <total-item title="Доставка в пункт выдачи">
+      <total-item title="Доставка в пункт выдачи" type="change-address">
         <p>${DeliveryInfo.pvz.city}, улица ${DeliveryInfo.pvz.street}, ${DeliveryInfo.pvz.house}</p>
         <p class="delivery-dates">5–8 фев</p>
       </total-item>
       
       <delivery-refund></delivery-refund>
       
-      <total-item title="Оплата картой">
+      <total-item title="Оплата картой" type="change-card">
         <div class="total-card__container">
-          <img src="${CardImage(PaymentInfo.payment_system)}" alt="">
-          <p>${CardFormat(PaymentInfo.card_number)}</p>
+          <img src="${CardImage(PaymentInfo[0].payment_system)}" alt="">
+          <p>${CardFormat(PaymentInfo[0].card_number)}</p>
         </div>
       </total-item>
       

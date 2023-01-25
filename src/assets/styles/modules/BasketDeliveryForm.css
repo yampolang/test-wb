@@ -1,0 +1,106 @@
+basket-delivery-form {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(5, 0, 10, 0.3);
+
+}
+
+.basket-delivery-form__wrapper {
+    background-color: white;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.basket-delivery-form__wrapper > .title__container {
+    font-size: 1.25em;
+    line-height: 1.75em;
+    padding-bottom: 13px;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+}
+
+.basket-delivery-form__wrapper > .way {
+    display: flex;
+    column-gap: 10px;
+}
+
+.way > * {
+    width: 100%;
+}
+
+.my-address {
+    padding-top: 26px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.my-address > span {
+    font-size: 0.8125em;
+    line-height: 1em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.my-address > li {
+    list-style: none;
+    display: flex;
+}
+
+.my-address__address {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+}
+
+.my-address > li > app-radio {
+    margin-top: 5px;
+}
+
+.my-address > li > .delete-icon {
+    margin-left: auto;
+}
+
+.my-address__rating {
+    font-size: 0.8125em;
+}
+
+.my-address__rating > span:first-of-type {
+    margin-left: 5px;
+}
+
+.my-address__rating > span:last-of-type {
+    margin-left: 8px;
+    color: var(--wb-grey);
+}
+
+.my-address__rating:before {
+    content: url("../../icons/star.svg");
+}
+
+@media screen and (min-width: 1024px) {
+    .basket-delivery-form__wrapper {
+        max-width: 500px;
+        border-radius: 16px;
+        height: auto;
+        max-height: 450px;
+        padding: 1em 1.5em 1.5em;
+    }
+
+    .basket-delivery-form__wrapper > app-button {
+        margin-top: 57px;
+    }
+
+    .basket-delivery-form__wrapper > app-button > button {
+        width: fit-content;
+        padding: 0.7em 3em;
+    }
+}

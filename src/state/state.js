@@ -159,3 +159,16 @@ export const checkInput = (value, rules) => {
 }
 
 export {productsInStock, missingProducts, selectedProducts}
+
+
+export const createLayer = () => {
+  const el = document.createElement('div')
+  el.id = 'layer'
+  document.getElementById('root').appendChild(el)
+}
+
+export const destroyLayer = () => {
+  if (document.getElementById('layer')) {
+    document.getElementById('layer').remove()
+  }
+}

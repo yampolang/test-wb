@@ -3,7 +3,9 @@
 
 @import "modules/Basket.css";
 @import "modules/BasketDelivery.css";
+@import "modules/BasketDeliveryForm.css";
 @import "modules/BasketPayment.css";
+@import "modules/BasketPaymentForm.css";
 @import "modules/BasketRecipient.css";
 @import "modules/BasketTotal.css";
 @import "modules/Footer.css";
@@ -14,6 +16,7 @@
 @import "modules/ui/AmountInput.css";
 @import "modules/ui/AppButton.css";
 @import "modules/ui/AppCheckbox.css";
+@import "modules/ui/AppRadio.css";
 @import "modules/ui/Badge.css";
 @import "modules/ui/DeliveryRefund.css";
 @import "modules/ui/TextInput.css";
@@ -33,6 +36,7 @@
     --wb-red: #F55123;
     --wb-green: #0CB477;
     --wb-smoky-dark: #F0ECF4;
+    --wb-orange: #FF970D;
 
     --mb-padding: 16px;
     --header-mb-height: 56px;
@@ -49,12 +53,19 @@
     display: flex;
     flex-direction: column;
 
-    font-family: "Segoe UI", sans-serif;
     word-break: break-word;
 }
 
-input, ::placeholder {
+#root, input, ::placeholder {
     font-family: "Segoe UI", sans-serif;
+}
+
+#layer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
 }
 
 

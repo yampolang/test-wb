@@ -10,6 +10,9 @@ export const CardFormat = value => {
 export const CardImage = value => {
   const cards = {
     "МИР": "src/assets/images/mir.png",
+    "VISA": "src/assets/images/visa.png",
+    "MASTERCARD": "src/assets/images/mastercard.png",
+    "NEMASTERCARD": "src/assets/images/nemastercard.png",
   }
 
   return Object.keys(cards).includes(value) ? cards[value] : '???'
