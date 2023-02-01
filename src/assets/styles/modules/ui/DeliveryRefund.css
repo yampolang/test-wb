@@ -6,7 +6,7 @@ delivery-refund {
 }
 
 delivery-refund:before {
-    content: url("/src/assets/icons/delivery-info.svg");
+    content: url("../../../icons/delivery-info.svg");
     height: 21px;
 }
 

@@ -18,7 +18,7 @@
 }
 
 .delivery-item > .content > span:before {
-    content: url("/src/assets/icons/rating.svg");
+    content: url("../../icons/rating.svg");
     margin-right: 4px;
 }
 
