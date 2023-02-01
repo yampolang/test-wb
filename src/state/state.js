@@ -1,4 +1,4 @@
-import {products} from "../db/TestData.js";
+import {MyAddresses, products} from "../db/TestData.js";
 import {LSActions} from "../localStorage/localStorageRepository.js";
 
 let basketProducts = [];
@@ -103,6 +103,17 @@ export const changeAddress = (id) => {
   LSActions.selectedAddress.set(id)
 
   totalRender()
+}
+
+export const getAddress = () => {
+  const address = LSActions.selectedAddress.get()
+
+  if (address !== null) {
+    return address
+  }
+
+ return MyAddresses[0].id
+
 }
 
 export const changeCard = (id) => {

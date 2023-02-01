@@ -1,14 +1,13 @@
 import("../ui/AppButton.js");
 import("../ui/AppRadio.js");
 import {MyAddresses} from "../../db/TestData.js";
-import {LSActions} from "../../localStorage/localStorageRepository.js";
 
-import {destroyLayer, changeAddress} from "../../state/state.js";
+import {destroyLayer, changeAddress, getAddress} from "../../state/state.js";
 
 customElements.define('basket-delivery-form', class extends HTMLElement {
   constructor() {
     super();
-    this.newAddressId = LSActions.selectedAddress.get()
+    this.newAddressId = getAddress()
   }
 
   render() {
@@ -58,7 +57,7 @@ customElements.define('basket-delivery-form', class extends HTMLElement {
             id="${item.id}" 
             name="address"
             value="${item.id}"
-            checked="${item.id === LSActions.selectedAddress.get()}"
+            checked="${item.id === getAddress()}"
           >
           </app-radio>
           <p class="my-address__address">${this.displayAddress(item)}</p>

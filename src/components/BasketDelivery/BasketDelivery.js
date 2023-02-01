@@ -5,7 +5,7 @@ import("../../components/ui/Badge.js");
 import("../ui/DeliveryRefund.js");
 import {DeliveryInfo, MyAddresses} from "../../db/TestData.js";
 
-import {createLayer} from "../../state/state.js";
+import {createLayer, getAddress} from "../../state/state.js";
 
 customElements.define('basket-delivery', class extends HTMLElement {
   render() {
@@ -17,7 +17,7 @@ customElements.define('basket-delivery', class extends HTMLElement {
       
       <div class="delivery-item">
         <p class="title">Пункт выдачи</p>
-        <p class="content">${this.displayAddress(MyAddresses.find(addr => addr.id === LSActions.selectedAddress.get()) )}</p>
+        <p class="content">${this.displayAddress(MyAddresses.find(addr => addr.id === getAddress()) )}</p>
       </div>
       
       <div class="delivery-item">
@@ -31,9 +31,10 @@ customElements.define('basket-delivery', class extends HTMLElement {
   }
 
   connectedCallback() {
-    if (LSActions.selectedAddress.get() === null) {
-      LSActions.selectedAddress.set(MyAddresses[0].id)
-    }
+    // if (LSActions.selectedAddress.get() === null) {
+    //   LSActions.selectedAddress.set(MyAddresses[0].id)
+    // }
+    // getAddress
 
     this.render()
 
