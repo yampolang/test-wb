@@ -2,8 +2,15 @@ import {PaymentInfo} from "../../db/TestData.js";
 import {CardImage, CardFormat} from "../../helpers/helpers.js";
 import {createLayer} from "../../state/state.js";
 import("./Form.js");
+import {LSActions} from "../../localStorage/localStorageRepository.js";
 
 customElements.define('basket-payment', class extends HTMLElement {
+  constructor() {
+    super();
+    this.displayedCard = PaymentInfo.find(card => card.id === LSActions.selectedCard.get())
+  }
+
+
   render() {
     this.innerHTML = `
       <div class="title__container">
@@ -11,8 +18,8 @@ customElements.define('basket-payment', class extends HTMLElement {
         <button class="change-btn">Изменить</button>
       </div>
       <div class="card__container">
-        <img src="${CardImage(PaymentInfo[0].payment_system)}" alt="">
-        <p>${CardFormat(PaymentInfo[0].card_number)} <span>${PaymentInfo[0].expiration_date.month}/${PaymentInfo[0].expiration_date.year}</span></p>
+        <img src="${CardImage(this.displayedCard.payment_system)}" alt="">
+        <p>${CardFormat(this.displayedCard.card_number)} <span>${this.displayedCard.expiration_date.month}/${this.displayedCard.expiration_date.year}</span></p>
       </div>
       <p class="card-info">Спишем оплату с карты при получении</p>
     `
@@ -20,6 +27,10 @@ customElements.define('basket-payment', class extends HTMLElement {
 
   connectedCallback() {
     this.render()
+
+    if (LSActions.selectedCard.get() === null) {
+      LSActions.selectedCard.set(PaymentInfo[0].id)
+    }
 
     this.querySelector('.title__container > .change-btn').addEventListener('click', () => {
       this.showForm()

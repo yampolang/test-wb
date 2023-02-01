@@ -13,8 +13,7 @@ customElements.define('app-radio', class extends HTMLElement {
     this.label   = this.hasAttribute('label') &&
                    this.getAttribute('label') || '';
     this.checked = this.hasAttribute('checked') &&
-                   this.getAttribute('checked') || false;
-
+                   (this.getAttribute('checked') === 'true');
   }
 
   render() {
@@ -34,6 +33,5 @@ customElements.define('app-radio', class extends HTMLElement {
     this.render();
 
     this.querySelector(`#${this.id}`).checked = this.checked
-
   }
 })

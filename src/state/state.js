@@ -1,4 +1,5 @@
 import {products} from "../db/TestData.js";
+import {LSActions} from "../localStorage/localStorageRepository.js";
 
 let basketProducts = [];
 let productsInStock = [];
@@ -94,6 +95,18 @@ export const changeSelectedAll = () => {
       }
     })
   }
+
+  totalRender()
+}
+
+export const changeAddress = (id) => {
+  LSActions.selectedAddress.set(id)
+
+  totalRender()
+}
+
+export const changeCard = (id) => {
+  LSActions.selectedCard.set(id)
 
   totalRender()
 }

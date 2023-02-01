@@ -136,10 +136,6 @@ customElements.define('basket-recipient', class extends HTMLElement {
 
   }
 
-  disconnectedCallback() {
-    LSActions.clear();
-  }
-
   focusOutRender() {
     this.connectedCallback()
   }

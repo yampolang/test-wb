@@ -1,10 +1,17 @@
 import("../ui/AppButton.js");
 import("../ui/AppRadio.js");
 import {PaymentInfo} from "../../db/TestData.js";
-import {destroyLayer} from "../../state/state.js";
+import {destroyLayer, changeCard} from "../../state/state.js";
 import {CardImage, CardFormat} from "../../helpers/helpers.js";
+import {LSActions} from "../../localStorage/localStorageRepository.js";
 
 customElements.define('basket-payment-form', class extends HTMLElement {
+  constructor() {
+    super();
+    this.newCardId = LSActions.selectedCard.get()
+  }
+
+
   render() {
     this.innerHTML = `
       <div class="basket-payment-form__wrapper">
@@ -32,7 +39,7 @@ customElements.define('basket-payment-form', class extends HTMLElement {
             id="${item.id}" 
             name="card"
             value="${item.id}"
-            checked="${item.id === PaymentInfo[0].card_number}"
+            checked="${item.id === LSActions.selectedCard.get()}"
           >
           </app-radio>
           <p class="my-cards__card">
@@ -40,6 +47,20 @@ customElements.define('basket-payment-form', class extends HTMLElement {
             <span>${CardFormat(item.card_number)}</span>
           </p>
         </li>`
+    })
+
+    let cardInput = this.querySelectorAll('app-radio[name="card"]')
+    cardInput.forEach(input => {
+      input.addEventListener('click', e => {
+        if (e.target.value !== this.newCardId) {
+          this.newCardId = e.target.value
+        }
+      })
+    })
+
+    this.querySelector('app-button').addEventListener('click', () => {
+      changeCard(this.newCardId)
+      destroyLayer()
     })
 
     this.querySelector('.cross-icon').addEventListener('click', () => {

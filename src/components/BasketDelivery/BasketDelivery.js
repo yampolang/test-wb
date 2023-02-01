@@ -31,7 +31,10 @@ customElements.define('basket-delivery', class extends HTMLElement {
   }
 
   connectedCallback() {
-    LSActions.selectedAddress.set(MyAddresses[0].id)
+    if (LSActions.selectedAddress.get() === null) {
+      LSActions.selectedAddress.set(MyAddresses[0].id)
+    }
+
     this.render()
 
     this.querySelector('.title__container > .change-btn').addEventListener('click', () => {

@@ -3,9 +3,14 @@ import("../ui/AppRadio.js");
 import {MyAddresses} from "../../db/TestData.js";
 import {LSActions} from "../../localStorage/localStorageRepository.js";
 
-import {destroyLayer} from "../../state/state.js";
+import {destroyLayer, changeAddress} from "../../state/state.js";
 
 customElements.define('basket-delivery-form', class extends HTMLElement {
+  constructor() {
+    super();
+    this.newAddressId = LSActions.selectedAddress.get()
+  }
+
   render() {
     this.innerHTML = `
       <div class="basket-delivery-form__wrapper">
@@ -46,6 +51,7 @@ customElements.define('basket-delivery-form', class extends HTMLElement {
     this.render();
 
     MyAddresses.forEach(item => {
+
       this.querySelector('.my-address').innerHTML +=
         `<li>
           <app-radio 
@@ -60,8 +66,24 @@ customElements.define('basket-delivery-form', class extends HTMLElement {
         </li>`
     })
 
+    let addressInputs = this.querySelectorAll('app-radio[name="address"]')
+    addressInputs.forEach(input => {
+
+      input.addEventListener('click', e => {
+        if (e.target.value !== this.newAddressId) {
+          this.newAddressId = e.target.value
+        }
+      })
+
+    })
+
     this.querySelector('.cross-icon').addEventListener('click', () => {
       this.remove()
+      destroyLayer()
+    })
+
+    this.querySelector('app-button').addEventListener('click', () => {
+      changeAddress(this.newAddressId)
       destroyLayer()
     })
 

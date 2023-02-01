@@ -19,15 +19,23 @@ export const LSActions = {
 
   selectedAddress: {
     get() {
-      return JSON.parse(localStorage.getItem('selectedAddress')) || {
-        addressId: '',
-      }
+      return localStorage.getItem('selectedAddress') || null
     },
 
     set(id) {
-      localStorage.setItem('selectedAddress', JSON.stringify(id))
+      localStorage.setItem('selectedAddress', id)
     },
   },
 
-  clear: () => localStorage.clear()
+  selectedCard: {
+    get() {
+      return localStorage.getItem('selectedCard') || null
+    },
+
+    set(id) {
+      localStorage.setItem('selectedCard', id)
+    },
+  }
+
+  // clear: () => localStorage.clear()
 }
