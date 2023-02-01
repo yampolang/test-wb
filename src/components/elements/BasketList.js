@@ -39,7 +39,9 @@ customElements.define('basket-list', class extends HTMLElement {
       </div>
       <div class="list-items ${this.isVisible ? '' : 'hidden'}"></div>
     `
-    productsInStock.forEach(item => this.querySelector('.list-items').innerHTML += BasketContentItem(item, this.windowWidth))
+
+    const listItemsElement = this.querySelector('.list-items')
+    productsInStock.forEach(item => listItemsElement.innerHTML += BasketContentItem(item, this.windowWidth))
   }
 
   connectedCallback() {

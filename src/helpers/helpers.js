@@ -1,6 +1,16 @@
 export const PriceFormat = value => {
-  const reg = /\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g
-  return value.toString().replace(reg, ' ')
+  let result = ''
+
+  let strValue = value + '';
+
+  for (let i = strValue.length - 1; i >= 0; i--) {
+    if ((strValue.length - 1 - i) % 3 === 0 && i !== strValue.length - 1) {
+      result = ' ' + result
+    }
+    result = strValue[i] + result
+  }
+
+  return result;
 }
 
 export const CardFormat = value => {

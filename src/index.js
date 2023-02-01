@@ -3,8 +3,6 @@ import("./components/Basket.js");
 import("./components/Footer.js");
 import("./components/MobileMenu.js");
 
-import("./components/BasketDelivery/Form.js")
-
 const root = document.getElementById('root')
 root.innerHTML = `
   <app-navbar></app-navbar>
