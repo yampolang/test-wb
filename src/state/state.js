@@ -1,4 +1,4 @@
-import {MyAddresses, products} from "../db/TestData.js";
+import {MyAddresses, PaymentInfo, products} from "../db/TestData.js";
 import {LSActions} from "../localStorage/localStorageRepository.js";
 
 let basketProducts = [];
@@ -120,6 +120,17 @@ export const changeCard = (id) => {
   LSActions.selectedCard.set(id)
 
   totalRender()
+}
+
+export const getCard = () => {
+  const card = LSActions.selectedCard.get()
+
+  if (card !== null) {
+    return card
+  }
+
+  return PaymentInfo[0].id
+
 }
 
 export const checkInput = (value, rules) => {

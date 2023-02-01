@@ -1,13 +1,12 @@
 import {PaymentInfo} from "../../db/TestData.js";
 import {CardImage, CardFormat} from "../../helpers/helpers.js";
-import {createLayer} from "../../state/state.js";
+import {createLayer, getCard} from "../../state/state.js";
 import("./Form.js");
-import {LSActions} from "../../localStorage/localStorageRepository.js";
 
 customElements.define('basket-payment', class extends HTMLElement {
   constructor() {
     super();
-    this.displayedCard = PaymentInfo.find(card => card.id === LSActions.selectedCard.get())
+    this.displayedCard = PaymentInfo.find(card => card.id === getCard())
   }
 
 
@@ -27,10 +26,6 @@ customElements.define('basket-payment', class extends HTMLElement {
 
   connectedCallback() {
     this.render()
-
-    if (LSActions.selectedCard.get() === null) {
-      LSActions.selectedCard.set(PaymentInfo[0].id)
-    }
 
     this.querySelector('.title__container > .change-btn').addEventListener('click', () => {
       this.showForm()
