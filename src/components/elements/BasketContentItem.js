@@ -43,7 +43,7 @@ export const BasketContentItem = (product, winWidth) => {
       <div class="item-actions">
         <div class="amount__container">
           <amount-input value="${product.amountTaken}" maxAmount="${product.amount}"></amount-input>
-          ${product.amount - product.amountTaken <= 10 ? `<p class="amount__container__text">Осталось: ${product.amount - product.amountTaken} шт.</p>` : ''}
+          ${product.amount - product.amountTaken <= 10 ? `<p class="amount__container__text">Осталось ${product.amount - product.amountTaken} шт.</p>` : ''}
         </div>
           
         <div>
@@ -73,7 +73,7 @@ export const BasketContentItem = (product, winWidth) => {
         
         <div class="item-actions">
           <amount-input value="${product.amountTaken}" maxAmount="${product.amount}"></amount-input>
-          ${product.amount - product.amountTaken <= 10 ? `<p class="amount__container__text">Осталось: ${product.amount - product.amountTaken} шт.</p>` : ''}
+          ${product.amount - product.amountTaken <= 10 ? `<p class="amount__container__text">Осталось ${product.amount - product.amountTaken} шт.</p>` : ''}
           <div>
             <div class="icon bci favorites-icon ${favoritesItems.includes(product.id) ? 'icon-active' : ''}"></div>
             <div class="icon bci delete-icon"></div>

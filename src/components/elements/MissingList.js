@@ -4,6 +4,7 @@ import {
   deleteFromBasket,
   missingProducts,
 } from "../../state/state.js";
+import {WordDeclension} from "../../helpers/helpers.js"
 
 customElements.define('missing-list', class extends HTMLElement {
   constructor() {
@@ -22,8 +23,8 @@ customElements.define('missing-list', class extends HTMLElement {
     }
 
     this.innerHTML = `
-      <div class="list-actions">
-        <p>Отсутствуют &#183; ${missingProducts.length}</p>
+      <div class="list-actions missing-actions">
+        <p>Отсутствуют &#183; ${missingProducts.length} ${WordDeclension(missingProducts.length, 'товар', 'товара', 'товаров')}</p>
         <div class="icon">        
           <div class="arrow-icon ${this.isVisible ? '' : 'active'}"></div>
         </div>

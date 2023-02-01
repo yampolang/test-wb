@@ -1,14 +1,19 @@
 basket-list, missing-list {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 33px;
 }
 
 .list-actions {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0 18px;
+    padding: 0 0 14px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.list-actions > .icon {
+    margin-right: 6px;
 }
 
 missing-list > .list-actions > p {
@@ -18,6 +23,10 @@ missing-list > .list-actions > p {
 .list-actions > label {
     display: flex;
     column-gap: 11px;
+}
+
+missing-list > .missing-actions {
+    padding-bottom: 20px;
 }
 
 .list-items > *:not(:nth-last-child(2)) {
